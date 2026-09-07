@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:v17": "URL=https://localhost:44322 playwright test --project=umbraco-17",
-    "test:v18": "URL=https://localhost:44327 playwright test --project=umbraco-18"
+    "test:v17": "cross-env URL=https://localhost:44322 playwright test tests/backoffice-login.spec.ts --project=umbraco-17",
+    "test:v18": "cross-env URL=https://localhost:44327 playwright test tests/compare-content-v18.spec.ts --project=umbraco-18"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +14,7 @@
     "@playwright/test": "^1.61.1",
     "@types/node": "^26.1.1",
     "@umbraco-cms/acceptance-test-helpers": "^17.5.3",
-    "@umbraco-cms/acceptance-test-helpers-v18": "npm:@umbraco-cms/acceptance-test-helpers@18.0.2"
+    "@umbraco-cms/acceptance-test-helpers-v18": "npm:@umbraco-cms/acceptance-test-helpers@18.0.2",
+    "cross-env": "^10.1.0"
   }
 }
