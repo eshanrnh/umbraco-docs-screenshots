@@ -25,4 +25,4 @@ if [ -z "$NAME" ]; then
   exit 1
 fi
 
-+echo "$NAME" | sed -E 's/[-_]?[vV][0-9]+(\.[^.]+)$/\1/'
+echo "$NAME" | sed -E 's/[-_]?[vV][0-9]+(\.[^.]+)$/\1/'
